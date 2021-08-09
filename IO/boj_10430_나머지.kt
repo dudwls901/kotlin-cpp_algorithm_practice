@@ -18,4 +18,5 @@ fun main(){
     bw.write("${((a%c)*(b%c))%c}\n")
     br.close()
     bw.close()
+    
 }
