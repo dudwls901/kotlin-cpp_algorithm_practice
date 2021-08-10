@@ -8,6 +8,32 @@
 
 ### 알고리즘 문제 풀이를 위한 팁 [Kotlin/Java]
 
+
+✅for문의 index (자바와의 차이점)<br>
+<pre>
+<code>
+    //java code
+    int i;
+    for(i=0; i<5;i++){
+        
+    }
+    System.out.println(i);
+</code>
+</pre>
+<br>
+코틀린의 i는 for문 내부에서 관리하기 때문에<br>
+for문 바깥에서 사용할 수 없음<br>
+<pre>
+<code>
+    //kotlin
+    var i :Int
+    for(i in 0 until 5){
+
+    }
+    println(i)//error : i를 초기화할 것
+</code>
+</pre>
+
 ✅다양한 모습의 버퍼<br>
 <details markdown="1">
 <summary>1.접기/펼치기(❤import도 필요 없으며 가장 간결하다 )</summary>
@@ -83,10 +109,10 @@ fun main(){
 </pre>
 </details>
   
-✅<br>
+✅입출력 속도<br>
 BufferedReader/Writer faster than Scanner faster than readLine(),print()<br>
 
-✅<br>
+✅버퍼 사용법<br>
 import java.io.BufferedReader<br>
 import java.io.BufferedWriter<br>
 import java.io.InputStreamReader<br?
@@ -101,11 +127,11 @@ BufferedReader, BufferedWriter 사용 후 항상 닫아주기<br>
 br.close()<br>
 bw.close()<br>
 
-✅<br>
+✅int형변환 속도<br>
 Integer.parseInt() faster than .toInt()<br>
 
-✅<br>
+✅입력 분리 저장 <br>
 StringTokenizer faster than split<br>
 
-✅<br>
+✅입력 분리 저장<br>
 val (a,b) = br.readLine().split(' ').map{Integer.parseInt(it)}<br>
