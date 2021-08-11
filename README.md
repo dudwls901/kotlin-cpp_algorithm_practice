@@ -1,10 +1,12 @@
 ## 🟣Kotlin/Java를 이용한 알고리즘 문제 풀이
-####   c++을 이용한 풀이는 아래의 블로그에 게시했습니다.
-  <a href="http://ongveloper.tistory.com">
+####   👇c++을 이용한 풀이는 아래의 블로그에 게시했습니다.
+ <a href="http://ongveloper.tistory.com">
     <img 
         src="https://img.shields.io/badge/-Tech%20Blog-655ced?style=flat&link=https://ongveloper.tistory.com"
          style="height : auto; margin-left : 10px; margin-right : 10px;"/>
 </a>
+
+---
 
 ### 알고리즘 문제 풀이를 위한 팁 [Kotlin/Java]
 ---
@@ -36,8 +38,42 @@ arr.lastIndexOf()
 ```
 
 ---
+<details markdown="1">
+<summary>✅ArrayList는 c++의 vector를 대체할 수 없다ㅜ</summary>
 
-✅for문의 index (자바와의 차이점)<br>
+kotlin/java의 ArrayList는 동적 크기라는 점에서 일반 배열과 차이가 있다.<br>
+.add()등의 함수로 원소를 추가할 수 있는데<br>
+c++의 vector처럼 사용할 수 없다.<br>
+이유는 ArrayList는 크기를 초기화할 수도 없으며,<br>
+.add()함수로 현재 ArrayList의 크기가 3이라고 할 때,<br>
+원소를 추가하게 되면 ArrayList의 크기를 키운 후 새로운 공간에 더 큰 메모리를 잡은 후<br>
+기존의 ArrayList의 요소를 복사하고 원소를 추가한다.<br>
+
+ArrayList 원소 추가 방식
+더 큰 메모리를 잡은 후 기존 메모리의 복사를 통해 크기를 늘린다.
+이 때 항상 여유 메모리를 두고 메모리를 추가한다.
+이러한 ArrayList의 특성 때문에 값이 자주 변경되어야 할 때는 ArrayList를 사용하는 것이 좋지 않다.
+
+
+</details>
+
+
+<details markdown="1">
+<summary>✅토큰의 끝까지 입력받기</summary>
+val tk = StringTokenizer(readLIne())<br>
+while(tk.hasMoreTokens()){<br>
+arr[i] = Integer.parseInt(tk.nextToken())<br>
+}<br>
+</details>
+
+<details markdown="1">
+<summary>✅소수점 자르기</summary>
+String.format("%.3f", cnt / n*100)
+</details>
+
+<details markdown="1">
+<summary>✅for문의 index (자바와의 차이점)</summary>
+<br>
 <pre>
 <code>
     //java code
@@ -61,8 +97,11 @@ for문 바깥에서 사용할 수 없음<br>
     println(i)//error : i를 초기화할 것
 </code>
 </pre>
+</details>
 
-✅다양한 모습의 버퍼<br>
+<details markdown="1">
+<summary>✅다양한 모습의 버퍼</summary>
+<br>
 <details markdown="1">
 <summary>1.접기/펼치기(❤import도 필요 없으며 가장 간결하다 )</summary>
 <pre>
@@ -136,11 +175,19 @@ fun main(){
 </code>
 </pre>
 </details>
-  
-✅입출력 속도<br>
-BufferedReader/Writer faster than Scanner faster than readLine(),print()<br>
+</details>
 
-✅버퍼 사용법<br>
+
+
+<details markdown="1">
+<summary>✅입출력 속도</summary>
+<br>
+BufferedReader/Writer faster than Scanner faster than readLine(),print()
+</details>
+
+<details markdown="1">
+<summary>✅버퍼 사용법</summary>
+<br>
 import java.io.BufferedReader<br>
 import java.io.BufferedWriter<br>
 import java.io.InputStreamReader<br?
@@ -154,12 +201,26 @@ BufferedReader, BufferedWriter 사용 후 항상 닫아주기<br>
 안 닫으면 버퍼에 남아 있음<br>
 br.close()<br>
 bw.close()<br>
+</details>
 
-✅int형변환 속도<br>
-Integer.parseInt() faster than .toInt()<br>
+<details markdown="1">
+<summary>✅int형변환 속도</summary>
+<br>
+Integer.parseInt() faster than .toInt()
+</details>
 
-✅입력 분리 저장 <br>
-StringTokenizer faster than split<br>
 
-✅입력 분리 저장<br>
-val (a,b) = br.readLine().split(' ').map{Integer.parseInt(it)}<br>
+
+<details markdown="1">
+<summary>✅입력 분리 </summary>
+<br>
+StringTokenizer faster than split
+</details>
+
+<details markdown="1">
+<summary>✅입력 분리 저장</summary>
+<br>
+val (a,b) = br.readLine().split(' ').map{Integer.parseInt(it)}
+</details>
+
+
