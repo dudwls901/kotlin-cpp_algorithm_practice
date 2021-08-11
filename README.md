@@ -28,6 +28,10 @@ sqrt(a)
 arr.max()
 arr.min()
 arr.average()
+arr.maxOrNull()
+arr.minOrNull()
+arr.indexOf()
+arr.lastIndexOf()
 
 ```
 
