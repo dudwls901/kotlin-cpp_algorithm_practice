@@ -38,16 +38,45 @@ arr.lastIndexOf()
 ```
 
 ---
+
+✅kotlin 함수에서 파라미터는 모두 값이 변하지 않는 Immutable이다. (val이 생략된 형태)<br>
+
+<details markdown="1">
+<summary>✅kotlin 함수에서 배열을 매개 변수로 받았을 때</summary>
+<pre>
+<code>
+fun change(arr : MutableList<Int>){
+    arr[2]=30
+}
+
+fun main(){
+    val arr = MutableList<Int>(5,{0})
+    println(arr[2])
+    change(arr)
+    println(arr[2])
+
+}
+</pre>
+</code>
+result 
+0
+30
+</details>
+
 <details markdown="1">
 <summary>✅ArrayList는 c++의 vector를 대체할 수 없다ㅜ</summary>
 
 kotlin/java의 ArrayList는 동적 크기라는 점에서 일반 배열과 차이가 있다.<br>
 .add()등의 함수로 원소를 추가할 수 있는데<br>
-c++의 vector처럼 사용할 수 없다.<br>
-이유는 ArrayList는 크기를 초기화할 수도 없으며,<br>
+c++의 vector와 다르게 ArrayList는 크기를 초기화할 수 없다.<br>
+c++의 vector와 원소를 추가하는 방식은 같다.<br>
 .add()함수로 현재 ArrayList의 크기가 3이라고 할 때,<br>
 원소를 추가하게 되면 ArrayList의 크기를 키운 후 새로운 공간에 더 큰 메모리를 잡은 후<br>
 기존의 ArrayList의 요소를 복사하고 원소를 추가한다.<br>
+다만, c++에선 체감하지 못 했지만, 코틀린은 속도가 느려서 알고리즘 문제 풀이를 할 때,<br>
+ArrayList 자료구조로 .add() 혹은 .removeLast()를 많이 사용하면 시간이 오래 걸리기 때문에 <br>
+웬만하면 리스트의 크기를 미리 지정하고 일반 배열로 처리하자.<br>
+ex) 조합 알고리즘<br>
 
 ArrayList 원소 추가 방식
 더 큰 메모리를 잡은 후 기존 메모리의 복사를 통해 크기를 늘린다.
