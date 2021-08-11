@@ -7,7 +7,31 @@
 </a>
 
 ### 알고리즘 문제 풀이를 위한 팁 [Kotlin/Java]
+---
+#### 🟥자주 사용하는 라이브러리, 함수, 프로퍼티
+<details markdown="1">
+<summary>import kotlin.math.*</summary>
 
+``` kotlin
+
+max(a,b)
+min(a,b)
+abs(a)
+sqrt(a)
+
+```
+
+</details>
+
+```
+
+arr.max()
+arr.min()
+arr.average()
+
+```
+
+---
 
 ✅for문의 index (자바와의 차이점)<br>
 <pre>
