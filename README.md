@@ -39,6 +39,48 @@ arr.lastIndexOf()
 
 ---
 
+<details markdown="1">
+<summary>✅PriorityQueue 내림차순 선언 두 가지 방식<br> </summary>
+<br>
+<pre>
+<code>
+ val pq1= PriorityQueue<Int>({a,b -> b-a})
+ val pq2 = PriorityQueue<Int>(Collections.reverseOrder())
+ 
+</code>
+</pre>
+
+</details>
+
+✅ 55.coreceAtMost(60) //return 55<br>
+
+<details markdown="1">
+<summary>✅?.(세이프콜), !!(non-null 단정 기호) </summary>
+<br>
+<pre>
+<code>
+fun main(){
+ var str1 : String?
+ str1 =null
+ println("str1.length = ${str1?.length}") //result : null
+ //?.(세이프콜) : 앞의 변수가 null일 시 뒤의 length를 실행하지 않고 null을 반환
+ //세이프콜을 사용하지 않으면 컴파일에러 발생
+ 
+ println("str1.length =${str1!!.length}") //npe발생
+ // !!(non-null 단정 기호) : 앞의 변수가 널이 아닐꺼라고 단정한다.
+ // !!사용시 컴파일 에러는 발생하지 않으나 npe 런타임에러 발생
+ 
+ val len = if(str !=null) str1.length else -1 //자동 형 변환을 통해 str이 null이 아님이 확인되면 str은 non-null상태가 되며, str.length를 사용할 수 있다.
+ val len = str1?.length ?: -1 //위의 식을 세이프콜과 엘비스 표현식으로 간결하게 변환
+ //str1?.length가 null이면 -1을 반환 null이 아니면 str1.length를 반환  
+ 
+}
+
+</code>
+</pre>
+
+</details>
+
 ✅kotlin 함수에서 파라미터는 모두 값이 변하지 않는 Immutable이다. (val이 생략된 형태)<br>
 
 <details markdown="1">
