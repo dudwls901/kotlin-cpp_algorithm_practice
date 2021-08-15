@@ -40,6 +40,26 @@ arr.lastIndexOf()
 ---
 
 <details markdown="1">
+<summary>✅PriorityQueue 정렬 커스텀<br> </summary>
+<br>
+<pre>
+<code>
+//다익스트라 사용 pq
+data class Node(val dis: Int, val r: Int, val c: Int)
+   val pq = PriorityQueue(Comparator<Node> { a, b ->
+        when {
+            a.dis < b.dis -> -1 
+            a.dis == b.dis -> 0
+            else -> 1
+        }
+
+    })
+</code>
+</pre>
+</details>
+
+
+<details markdown="1">
 <summary>✅Collection 정렬 커스텀<br> </summary>
 <br>
 <pre>
