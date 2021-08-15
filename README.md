@@ -40,6 +40,28 @@ arr.lastIndexOf()
 ---
 
 <details markdown="1">
+<summary>✅Collection 정렬 커스텀<br> </summary>
+<br>
+<pre>
+<code>
+//문자열의 길이 기준 오름차순, 길이가 같다면 사전순 오름차순
+    val set = mutableSetOf<String>()
+    val resultSet = set.sortedWith(Comparator { a, b ->
+        when {
+            a.length < b.length -> -1
+            a.length == b.length -> when {
+                a < b -> -1
+                else -> 1
+            }
+            else -> 1
+        }
+    })
+</code>
+</pre>
+
+</details>
+
+<details markdown="1">
 <summary>✅PriorityQueue 내림차순 선언 두 가지 방식<br> </summary>
 <br>
 <pre>
