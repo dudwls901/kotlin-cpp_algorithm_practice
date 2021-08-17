@@ -39,6 +39,11 @@ arr.lastIndexOf()
 
 ---
 
+
+✅val (from,to) = List(2){Integer.parseInt(tk.nextToken())}<br>
+//nextToken 없을 때까지 계속 <br>
+
+
 <details markdown="1">
 <summary>✅PriorityQueue 정렬 커스텀<br> </summary>
 <br>
