@@ -38,7 +38,50 @@ arr.lastIndexOf()
 ```
 
 ---
+<details markdown="1">
+<summary>✅깊은 복사와 얕은 복사<br> </summary>
+<br>
+<pre>
+Kotlin에선 배열의 원본 아이템을 새로 만들어 새로 만드는 객체에 추가할 경우는 깊은 복사, 나머지는 얕은 복사이다.
+얕은 복사 : 원본의 값이 바뀜
+깊은 복사 : 원본의 값이 바뀌지 않음
+<code>
+val arr = intArrayOf(1,2,3)
 
+//얕은 복사
+val arrCopy = arr 
+arrCopy[0]=5 // arr[0] ==5로 바뀜
+
+//얕은 복사
+val arrCopy = arr.copyOf()
+arrCopy[0]=5 //arr[0] ==5로 바뀜
+
+//깊은 복사
+val arrCopy = IntArray(3)
+for(i in arr.indices){
+ arrCopy[i] = arr[i]
+}
+arrCopy[0]=5 // arr[0]==1 안 바뀜
+
+
+ //얕은 복사
+ val src1 = arrayListOf(arrayOf("ICN", "A"), arrayOf("ICN", "B"), arrayOf("B", "ICN"))
+ val copiedForEachAdd = ArrayList<Array<String>>()
+ src1.forEach { copiedForEachAdd.add(it) } // for each add
+ copiedForEachAdd[0][0]="changed" //src1[0][0] == "ICN" 안 바뀜
+ src1.forEach{print(it.contentToString())}
+ println()
+ 
+ //깊은 복사
+ val src2 = arrayListOf(arrayOf("ICN", "A"), arrayOf("ICN", "B"), arrayOf("B", "ICN"))
+ val copiedForEachAddCopyOf = ArrayList<Array<String>>()
+ copiedForEachAddCopyOf[0][0]="changed" //src2[0][0] == "ICN" 안 바뀜
+ src2.forEach { copiedForEachAddCopyOf.add(it.copyOf()) }// for each add copy of
+ src2.forEach{print(it.contentToString())}
+</code>
+</pre>
+
+</details>
 
 ✅val (from,to) = List(2){Integer.parseInt(tk.nextToken())}<br>
 //nextToken 없을 때까지 계속 <br>
