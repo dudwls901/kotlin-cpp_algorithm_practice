@@ -39,6 +39,27 @@ arr.lastIndexOf()
 
 ---
 <details markdown="1">
+<summary>✅특정 문자열을 포함한 문자열들을 변형<br> </summary>
+<br>
+<pre>
+val arr = Array<String>(10){""}
+ arr.filter{it.contains("abc")}.forEach{it.replace("abc","ddd")}
+</code>
+</pre>
+</details>
+
+<details markdown="1">
+<summary>✅ArrayList<String> to Array<String><br></summary>
+<br>
+<pre>
+  val strList = ArrayList<String>()<br>
+  val arr : Array<String> = strList.toTypedArray() <br>
+</code>
+</pre>
+</details>
+
+
+<details markdown="1">
 <summary>✅깊은 복사와 얕은 복사<br> </summary>
 <br>
 <pre>
