@@ -38,6 +38,11 @@ arr.lastIndexOf()
 ```
 
 ---
+
+✅N>12이면 조합 안 쓰는게 좋음<br>
+
+
+
 <details markdown="1">
 <summary>✅특정 문자열을 포함한 문자열들을 변형<br> </summary>
 <br>
