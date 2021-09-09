@@ -41,12 +41,22 @@ arr.lastIndexOf()
 
 ✅N>12이면 조합 안 쓰는게 좋음<br>
 
-
-
+<details markdown="1">
+<summary>✅it.first기준 내림차순, 같으면 it.seconde기준 오름차순<br> </summary>
+<br>
+<pre>
+<code>
+ score.sortWith(compareByDescending<Pair<Int, String>> { it.first }.thenBy { it.second })
+ </code>
+</pre>
+</details>
+ 
+ 
 <details markdown="1">
 <summary>✅특정 문자열을 포함한 문자열들을 변형<br> </summary>
 <br>
 <pre>
+<code>
 val arr = Array<String>(10){""}
  arr.filter{it.contains("abc")}.forEach{it.replace("abc","ddd")}
 </code>
@@ -57,6 +67,7 @@ val arr = Array<String>(10){""}
 <summary>✅ArrayList<String> to Array<String><br></summary>
 <br>
 <pre>
+<code>
   val strList = ArrayList<String>()<br>
   val arr : Array<String> = strList.toTypedArray() <br>
 </code>
