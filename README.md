@@ -450,9 +450,8 @@ StringTokenizer faster than split
 
 <details markdown="1">
 <summary>✅입력 분리 저장</summary>
-<br>
-val (a,b) = br.readLine().split(' ').map{Integer.parseInt(it)}
-val st = StringTokenizer(br.readLine())
+val (a,b) = br.readLine().split(' ').map{Integer.parseInt(it)}<br>
+val st = StringTokenizer(br.readLine())<br>
 val (a,b) = List(2) {st.nextToken().toInt()}
 </details>
 
