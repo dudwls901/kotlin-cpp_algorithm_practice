@@ -39,6 +39,29 @@ arr.lastIndexOf()
 
 ---
 <details markdown="1">
+<summary>✅Kotlin 2차원 그래프 입력 <br> </summary>
+<br>
+<pre>
+<code>
+    val graph = Array(n){r->
+        val st = StringTokenizer(br.readLine())
+        IntArray(m){c->
+            val node = st.nextToken().toInt()
+            if(node ==2){
+              sr = r
+              sc = c
+            }
+            node
+        }
+    }
+
+ </code>
+</pre>
+</details>
+ 
+
+
+<details markdown="1">
 <summary>✅백준 메모리 초과 유형들<br> </summary>
 <br>
 <pre>
@@ -443,7 +466,7 @@ Integer.parseInt() faster than .toInt()
 
 
 <details markdown="1">
-<summary>✅입력 분리 </summary>
+<summary>✅입력 분리  </summary>
 <br>
 StringTokenizer faster than split
 </details>
