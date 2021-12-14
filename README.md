@@ -38,6 +38,11 @@ arr.lastIndexOf()
 ```
 
 ---
+
+✅Long.MAX_VALUE = 10^8~~~<br>
+
+✅소수점 셋째 자리에서 반올림 후 둘째 자리까지 출력 : write(String.format("%.2f", round(answer*100) /100))<br>
+
 <details markdown="1">
 <summary>✅Kotlin 2차원 그래프 입력 <br> </summary>
 <br>
