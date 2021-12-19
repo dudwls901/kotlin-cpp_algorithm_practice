@@ -39,6 +39,8 @@ arr.lastIndexOf()
 
 ---
 
+✅CharArray to String -> val str = String(chArr)
+
 ✅Long.MAX_VALUE = 10^8~~~<br>
 
 ✅소수점 셋째 자리에서 반올림 후 둘째 자리까지 출력 : write(String.format("%.2f", round(answer*100) /100))<br>
