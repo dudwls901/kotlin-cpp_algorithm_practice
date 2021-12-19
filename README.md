@@ -39,6 +39,9 @@ arr.lastIndexOf()
 
 ---
 
+✅indexOf는 O(N) -> set에서 요소 찾을 때 contains사용 O(1)
+
+
 ✅CharArray to String -> val str = String(chArr)
 
 ✅Long.MAX_VALUE = 10^8~~~<br>
