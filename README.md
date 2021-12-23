@@ -39,6 +39,8 @@ arr.lastIndexOf()
 
 ---
 
+✅배열 중복 값 제거 -> val newArr : List<Int> = arr.distinct()
+
 ✅indexOf는 O(N) -> set에서 요소 찾을 때 contains사용 O(1)
 
 
