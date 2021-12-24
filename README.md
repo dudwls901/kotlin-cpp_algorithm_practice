@@ -303,6 +303,8 @@ result
 </details>
 
 <details markdown="1">
+
+<!--
 <summary>✅ArrayList는 c++의 vector를 대체할 수 없다ㅜ</summary>
 
 kotlin/java의 ArrayList는 동적 크기라는 점에서 일반 배열과 차이가 있다.<br>
@@ -327,6 +329,7 @@ ArrayList 원소 추가 방식
 
 
 <details markdown="1">
+-->
 <summary>✅토큰의 끝까지 입력받기</summary>
 val tk = StringTokenizer(readLIne())<br>
 while(tk.hasMoreTokens()){<br>
