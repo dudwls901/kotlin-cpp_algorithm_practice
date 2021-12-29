@@ -39,6 +39,21 @@ arr.lastIndexOf()
 
 ---
 
+
+<details markdown="1">
+<summary>✅비트마스킹<br> </summary>
+<br>
+<pre>
+<code>
+  val a = 0b00000011 
+  val b = 0b00001100 
+  Integer.bitCount(a xor b) // 4
+  // a xor b == 15(0b00001111) 
+
+ </code>
+</pre>
+</details>
+
 ✅foreach{}는 Collection에 유리 https://hwan-shell.tistory.com/245
 
 ✅배열 중복 값 제거 -> val newArr : List<Int> = arr.distinct()
