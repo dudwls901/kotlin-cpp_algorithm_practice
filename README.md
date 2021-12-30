@@ -39,6 +39,8 @@ arr.lastIndexOf()
 
 ---
 
+✅ 시간 관련 문제 dd:hh:mm:ss는 항상 단위 
+
 
 <details markdown="1">
 <summary>✅비트마스킹<br> </summary>
