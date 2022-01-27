@@ -38,6 +38,7 @@ arr.lastIndexOf()
 ```
 
 ---
+✅ swap -> a = b.also{b = a}
 
 ✅ 시간 관련 문제 dd:hh:mm:ss는 항상 단위 통일
 
