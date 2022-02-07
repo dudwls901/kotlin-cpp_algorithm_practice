@@ -52,6 +52,9 @@ arr.lastIndexOf()
   val b = 0b00001100 
   Integer.bitCount(a xor b) // 4
   // a xor b == 15(0b00001111) 
+ 
+ Integer.toBinaryString(num) //ex) 000111010
+ str.toInt(2)
 
  </code>
 </pre>
