@@ -1,5 +1,5 @@
-## 🟣Kotlin/C++를 이용한 알고리즘 문제 풀이
-####   👇c++을 이용한 풀이는 아래의 블로그에 게시했습니다.
+## 🟣Kotlin/C++/Java를 이용한 알고리즘 문제 풀이
+####   👇풀이는 아래의 블로그에 게시했습니다.
  <a href="http://ongveloper.tistory.com">
     <img 
         src="https://img.shields.io/badge/-Tech%20Blog-655ced?style=flat&link=https://ongveloper.tistory.com"
@@ -8,9 +8,9 @@
 
 ---
 
-### 알고리즘 문제 풀이를 위한 팁 [Kotlin/c++]
+### 알고리즘 문제 풀이를 위한 팁 [Kotlin/c++/Java]
 ---
-#### 🟥자주 사용하는 라이브러리, 함수, 프로퍼티
+#### 🟥[Kotlin]자주 사용하는 라이브러리, 함수, 프로퍼티
 <details markdown="1">
 <summary>import kotlin.math.*</summary>
 
@@ -38,6 +38,42 @@ arr.lastIndexOf()
 ```
 
 ---
+
+<details markdown="1">
+<summary>✅ Java 커스텀 정렬 </summary>
+<br>
+<pre>
+<code>
+class Edge implements Comparable<Edge>{
+    public long dis;
+    public int from;
+    public int to;
+    Edge(long dis, int from, int to){
+        this.from = from;
+        this.dis = dis;
+        this.to = to;
+    }
+     
+    @Override
+    public int compareTo(Edge edge) {
+        if(this.dis < edge.dis) {
+            return -1;
+        }
+        else if(this.dis > edge.dis) {
+            return 1;
+        }
+        return 0;
+    }
+}
+//간선 dis 기준 오름차순
+Collections.sort(edge);
+
+ </code>
+</pre>
+</details>
+
+
+
 ✅ swap -> a = b.also{b = a}
 
 ✅ 시간 관련 문제 dd:hh:mm:ss는 항상 단위 통일
