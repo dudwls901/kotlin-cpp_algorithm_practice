@@ -44,7 +44,7 @@ arr.lastIndexOf()
 <br>
 <pre>
 <code>
-class Edge implements Comparable<Edge>{
+class Edge implements Comparable<'Edge'>{
     public long dis;
     public int from;
     public int to;
