@@ -40,6 +40,23 @@ arr.lastIndexOf()
 ---
 
 <details markdown="1">
+<summary>✅ trim()으로 빈 문자열 찾기 </summary>
+<br>
+<pre>
+https://kkh0977.tistory.com/709
+<code>
+	var str_one = " he l lo"
+	var str_two = " "
+
+	println("str_one 문자열 빈값 확인 : "+str_one.trim().isEmpty()) // false
+	println("str_two 문자열 빈값 확인 : "+str_two.trim().isEmpty()) // true
+
+ </code>
+</pre>
+</details>
+
+
+<details markdown="1">
 <summary>✅ Java 커스텀 정렬 </summary>
 <br>
 <pre>
