@@ -39,6 +39,9 @@ arr.lastIndexOf()
 
 ---
 
+
+✅ double/float.NaN으로 실수 validation 
+
 <details markdown="1">
 <summary>✅ trim()으로 빈 문자열 찾기 </summary>
 <br>
