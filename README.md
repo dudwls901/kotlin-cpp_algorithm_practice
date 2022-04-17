@@ -40,6 +40,42 @@ arr.lastIndexOf()
 ---
 
 
+<details markdown="1">
+<summary>✅ sortBy faster than sortWith </summary>
+<br>
+<pre>
+<code>
+//sortWith
+fun ArrayList<Tree>.customSort() {
+    this.sortWith { a, b ->
+        when {
+            a.age < b.age -> -1
+            a.age == b.age -> 0
+            else -> 1
+        }
+    }
+}
+//sortBy
+tree.sortedBy { it.age }
+ </code>
+</pre>
+</details>
+
+<details markdown="1">
+<summary>✅ Dequeue를 이용하여 정렬 줄이기 </summary>
+<br>
+<pre>
+<code>
+//새로 값이 추가될 때 addFirst 혹은 addLast로 조절 가능
+//값을 뺄 때도 pollFirst 혹은 pollLast
+//https://www.acmicpc.net/problem/16235
+val tree= ArrayDeque<Tree>()
+tree.sortBy{it.age} // 최초 한 번만 정렬 후 나머지는 addFirst, addLast등으로 정렬 유지
+ </code>
+</pre>
+</details>
+
+
 ✅ double/float.NaN으로 실수 validation 
 
 <details markdown="1">
