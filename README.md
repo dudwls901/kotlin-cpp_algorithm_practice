@@ -39,6 +39,22 @@ arr.lastIndexOf()
 
 ---
 
+<details markdown="1">
+<summary>✅ 두 개의 그래프를 비교하는 스킬 </summary>
+큰 그래프를 하나 두고, 가운데 하나 그래프 고정, 나머지 그래프를 한 칸씩 이동하면서 비교
+<br>
+짠돌이 호석 : https://ongveloper.tistory.com/526
+</details>
+
+<details markdown="1">
+<summary>✅ 입력 템플릿 </summary>
+<br>
+<pre>
+<code>
+fun getIntGraph() = br.readLine().split(' ').map { it.toInt() }
+</code>
+</pre>
+</details>
 
 <details markdown="1">
 <summary>✅ sortBy faster than sortWith </summary>
