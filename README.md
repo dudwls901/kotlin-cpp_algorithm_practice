@@ -62,7 +62,7 @@ tree.sortedBy { it.age }
 </details>
 
 <details markdown="1">
-<summary>✅ Dequeue를 이용하여 정렬 줄이기 </summary>
+<summary>✅ Deque를 이용하여 정렬 줄이기 </summary>
 <br>
 <pre>
 <code>
