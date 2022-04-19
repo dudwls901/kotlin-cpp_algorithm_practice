@@ -40,6 +40,16 @@ arr.lastIndexOf()
 ---
 
 <details markdown="1">
+<summary>✅ 0으로 채워서 자릿수 맞추기 -> String.format("%04d",num)</summary>
+<pre>
+<code>
+write("${String.format("%0${k+1}d", maxAns)}\n${String.format("%0${k+1}d", minAns)}")
+</code>
+</pre>
+</details>
+
+
+<details markdown="1">
 <summary>✅ 두 개의 그래프를 비교하는 스킬 </summary>
 큰 그래프를 하나 두고, 가운데 하나 그래프 고정, 나머지 그래프를 한 칸씩 이동하면서 비교
 <br>
