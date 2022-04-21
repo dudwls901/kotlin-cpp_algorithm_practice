@@ -40,6 +40,17 @@ arr.lastIndexOf()
 ---
 
 <details markdown="1">
+<summary>✅ </summary>
+<pre>
+<code>
+    println(Integer.toHexString(100))	// 10진수 100 -> 16진수 
+    println(Integer.toOctalString(100))	// 10진수 100 -> 8진수 144
+    println(Integer.toBinaryString(100))// 10진수 100 -> 2진수 01100100
+</code>
+</pre>
+</details>
+
+<details markdown="1">
 <summary>✅ 0으로 채워서 자릿수 맞추기 -> String.format("%04d",num)</summary>
 <pre>
 <code>
