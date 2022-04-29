@@ -40,7 +40,24 @@ arr.lastIndexOf()
 ---
 
 <details markdown="1">
-<summary>✅ </summary>
+<summary>✅ Kotlin String.capitalize() : 첫 번째 문자 대문자화!</summary>
+<br>
+<pre>
+String.capitalize() returns a copy of this string having its first letter upper-cased.
+<code>
+class Solution {
+     fun solution(s: String): String {
+          return s.toLowerCase().split(" ").map {
+                it.capitalize()
+            }.joinToString(" ")
+    }
+}
+</code>
+</pre>
+</details>
+
+<details markdown="1">
+<summary>✅ 진수 변환 출력 </summary>
 <pre>
 <code>
     println(Integer.toHexString(100))	// 10진수 100 -> 16진수 
