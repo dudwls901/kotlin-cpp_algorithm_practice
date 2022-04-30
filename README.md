@@ -40,6 +40,19 @@ arr.lastIndexOf()
 ---
 
 <details markdown="1">
+<summary>✅ temp 없이 swap -> xor swap</summary>
+<br>
+<pre>
+X ← X XOR Y
+Y ← X XOR Y
+X ← X XOR Y
+</pre>
+</details>
+
+
+
+
+<details markdown="1">
 <summary>✅ Kotlin String.capitalize() : 첫 번째 문자 대문자화!</summary>
 <br>
 <pre>
