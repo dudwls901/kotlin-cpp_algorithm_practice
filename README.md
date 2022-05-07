@@ -61,6 +61,7 @@ arr.lastIndexOf()
  - ex 양과 늑대, 벽 부수고 이동하기 등
  - 뭘 달고 다님
  - data class 만들어서 상태값 들고 댕기자
+8. 탐색에서 n 작으면 비트마스킹 고려
 
 </pre>
 </details>
