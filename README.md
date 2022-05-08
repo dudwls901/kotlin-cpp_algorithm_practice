@@ -320,7 +320,7 @@ Collections.sort(edge);
 ✅N>12이면 조합 안 쓰는게 좋음<br>
 
 <details markdown="1">
-<summary>✅it.first기준 내림차순, 같으면 it.seconde기준 오름차순<br> </summary>
+<summary>✅it.first기준 내림차순, 같으면 it.seconde기준 오름차순 sortWith(compareBy {}.thenBy)<br> </summary>
 <br>
 <pre>
 <code>
