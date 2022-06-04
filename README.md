@@ -151,6 +151,8 @@ fun ArrayList<Tree>.customSort() {
 }
 //sortBy
 tree.sortedBy { it.age }
+//thenBy
+sortedNode.sortWith(compareByDescending<Node> { it.y }.thenBy { it.x })
  </code>
 </pre>
 </details>
