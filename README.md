@@ -67,6 +67,41 @@ arr.lastIndexOf()
 </details>
 
 
+<details markdown="1">
+<summary>✅ dfs vs bfs (feat. String Result) </summary>
+<br>
+<pre>
+dfs라면
+sb.append(next)
+dfs()
+sb.deleteCharAt(lastIdx)
+로, StringBuilder의 이점을 살릴 수 있는데,
+
+bfs 같은 경우
+sb.append(next)
+q.add(sb)
+sb.deleteCharAt(lastIdx)
+이런 식으로 하게 되면 모두 같은 sb를 참조하게 되어 string값이 원하는 대로 나오지 않는다.
+따라서 큐에 문자열을 삽입할 때마다 어차피 DeepCopy로 넣어주어야 하니 StringBuilder의 이점을 살릴 수 없어 그냥 String으로 한다
+// q.add(StringBuilder(sb))
+</pre>
+</details>
+
+
+<details markdown="1">
+<summary>✅ String vs StringBuilder vs StringBuffer </summary>
+<br>
+<pre>
+String : 데이터 잘 안 바뀔 때
+StringBuilder, StringBuffer : 데이터 자주 바뀔 때
+StringBuilder : 스레드세이프 X
+StringBuffer : 스레드 세이프 O
+</pre>
+</details>
+
+
+
+<details markdown="1">
 <summary>✅ temp 없이 swap -> xor swap</summary>
 <br>
 <pre>
@@ -75,8 +110,6 @@ Y ← X XOR Y
 X ← X XOR Y
 </pre>
 </details>
-
-
 
 
 <details markdown="1">
