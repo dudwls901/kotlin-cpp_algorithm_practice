@@ -34,6 +34,8 @@ arr.maxOrNull()
 arr.minOrNull()
 arr.indexOf()
 arr.lastIndexOf()
+arr.sortWith(compareBy({it.name}, {it.price}))
+arr.minBy { it.price }
 
 ```
 
