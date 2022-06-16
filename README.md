@@ -36,6 +36,7 @@ arr.indexOf()
 arr.lastIndexOf()
 arr.sortWith(compareBy({it.name}, {it.price}))
 arr.minBy { it.price }
+arr.filter { it -> it > 0}.forEach{ e -> print("$it ") }
 
 ```
 
@@ -65,6 +66,36 @@ arr.minBy { it.price }
  - data class 만들어서 상태값 들고 댕기자
 8. 탐색에서 n 작으면 비트마스킹 고려
 
+</pre>
+</details>
+
+<details markdown="1">
+<summary>✅ 배열 평탄화 (다차원 -> 단일 배열) </summary>
+<br>
+<pre>
+flatten() : 다차원 배열을 단일 배열로 생성
+Array에만 사용 가능 (IntArray, Collection 사용 불가)
+<code>
+    val arr1 = arrayOf(arrayOf(1,2,3), arrayOf(4,5,6))
+    println(arr1.flatten())
+// [1,2,3,4,5,6]
+</code>
+</details>
+
+
+<details markdown="1">
+<summary>✅ 체이닝 예시 (feat. 필터링) </summary>
+<br>
+<pre>
+체이닝 : 메소드들 연결
+<code>
+val fruits = arrayOf("banana", "avocado", "apple", "kiwi")
+fruits
+.filter {it.startsWith("a")}
+.sortedBy { it }
+.map {it.toUpperCase() }
+.forEach {println(it)}
+</code>
 </pre>
 </details>
 
