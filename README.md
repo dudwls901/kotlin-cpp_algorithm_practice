@@ -25,7 +25,7 @@ sqrt(a)
 
 </details>
 
-```
+```Kotlin
 
 arr.max()
 arr.min()
@@ -37,6 +37,13 @@ arr.lastIndexOf()
 arr.sortWith(compareBy({it.name}, {it.price}))
 arr.minBy { it.price }
 arr.filter { it -> it > 0}.forEach{ e -> print("$it ") }
+onEach : 각 요소를 람다식으로 처리한 후 컬렉션을 반환! 요소 수정 불가 (print등의 처리에 사용)
+forEach,forEachIndexed : 각 요소를 람다식으로 처리, 요소 수정 가능
+map, mapIndexed : 각 요소를 람다식으로 처리한 후 컬렉션을 반환! 요소를 복사하고 편집함(기존 리스트의 요소 영향 x,기존 컬렉션의 리스트를 수정한 리스트를 얻을 때 사용)
+mapNotNull : Null을 제외하고 식을 적용해 새로운 컬렉션 반환
+fold: 초기값과 정해진 식에 따라 처음요소부터 끝 요소에 적용하며 값을 생성
+reduce: fold와 동일하지만 초기값을 사용하지 않음
+foldRight, reduceRight: 오른쪽부터 시작
 
 ```
 
@@ -68,6 +75,35 @@ arr.filter { it -> it > 0}.forEach{ e -> print("$it ") }
 
 </pre>
 </details>
+
+<details markdown="1">
+<summary>✅ fold, reduce</summary>
+<br>
+<pre>
+<code>
+val list = listOf(1,2,3,4,5,6)
+println(list.fold(4) { total, next -> total + next }) //4 + 1 + ... + 6 = 25
+println(list.ford(1)) { total, next -> total * next}) // 1 * 1 * 2 * ... * 6 = 720
+println(list.reduce { total, next -> total + next })
+
+
+</code>
+</details>
+
+<details markdown="1">
+<summary>✅ 컬렉션 반복문 더 야무지게 쓰기</summary>
+<br>
+<pre>
+<code>
+val arr = listOf(1,2,3)
+val returnedList1 = list.onEach{ println(it) }// 콜렉션을 반환, element를 변경할 순 없고 어떠한 처리는 가능
+val returnedList2 = list.map{it*2} //콜렉션을 반환, element 변경할 수 있음
+list.forEach { print("$it ")}
+list.forEachIndexed {idx, value -> println("$idx $value")}
+
+</code>
+</details>
+
 
 <details markdown="1">
 <summary>✅ 배열 평탄화 (다차원 -> 단일 배열) </summary>
