@@ -77,6 +77,17 @@ foldRight, reduceRight: 오른쪽부터 시작
 </details>
 
 <details markdown="1">
+<summary>✅ capitalize() deprecated in kotlin1.5</summary>
+<br>
+<pre>
+capitalize는 코틀린 1.5부터 deprecated되었다.
+이는 replaceFirstChar 등 여러 방법으로 대체할 수 있는데,
+기존에 capitalize 대신 확장함수 등을 이용하여 좀 더 목적이 분명하고 명확한 이름을 사용하는 것을 권장한다.
+s.split(' ').joinToString(" ") { it.lowercase().replaceFirstChar { it.uppercase() } }
+</details>
+
+
+<details markdown="1">
 <summary>✅ fold, reduce</summary>
 <br>
 <pre>
