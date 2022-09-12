@@ -30,6 +30,7 @@ sqrt(a)
 arr.max()
 arr.min()
 arr.average()
+String.trim() : 문자열 양 끝 공백 제거 (가끔 백준 입력에 공백이 잘못 들어가 있는 경우 NumberFormatException 방지)
 arr.maxOrNull()
 arr.minOrNull()
 arr.indexOf()
@@ -77,6 +78,17 @@ foldRight, reduceRight: 오른쪽부터 시작
 </details>
 
 <details markdown="1">
+<summary>✅ 2차원 리스트 평탄화 후 조건에 맞는 개수 찾기</summary>
+<br>
+<pre>
+<code>
+lateinit var graph: Array<List<Int>>
+filter.flatMap { it.asIterable() }.count { it >= search }
+</code>
+</details>
+
+
+<details markdown="1">
 <summary>✅ capitalize() deprecated in kotlin1.5</summary>
 <br>
 <pre>
@@ -120,6 +132,7 @@ list.forEachIndexed {idx, value -> println("$idx $value")}
 <summary>✅ 배열 평탄화 (다차원 -> 단일 배열) </summary>
 <br>
 <pre>
+// flatmap으로 
 flatten() : 다차원 배열을 단일 배열로 생성
 Array에만 사용 가능 (IntArray, Collection 사용 불가)
 <code>
