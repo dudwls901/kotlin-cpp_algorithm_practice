@@ -226,6 +226,7 @@ class Solution {
 <summary>✅ 진수 변환 출력 </summary>
 <pre>
 <code>
+    println(10.toString(2)) // 10진수 10 -> 2
     println(Integer.toHexString(100))	// 10진수 100 -> 16진수 
     println(Integer.toOctalString(100))	// 10진수 100 -> 8진수 144
     println(Integer.toBinaryString(100))// 10진수 100 -> 2진수 01100100
