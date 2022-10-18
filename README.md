@@ -78,6 +78,29 @@ foldRight, reduceRight: 오른쪽부터 시작
 </details>
 
 <details markdown="1">
+<summary>✅ map()으로 원하는 프로퍼티만 가진 리스트 만들기</summary>
+<br>
+<pre>
+<code>
+data class SiteVisit(
+    val path: String,
+    val duration: Double,
+    val os: OS
+)
+enum class OS {WINDOWS, LINUX, MAC, IOS, ANDROID}
+
+val averageWindowsDuration = log
+.filter { it.os == OS.WINDOWS } // List< SiteVisit >
+.map(SiteVisit::duration) // List< Double >
+.average()
+println(averageWindowsDuration)
+
+</code>
+</details>
+
+
+
+<details markdown="1">
 <summary>✅ 2차원 리스트 평탄화 후 조건에 맞는 개수 찾기</summary>
 <br>
 <pre>
