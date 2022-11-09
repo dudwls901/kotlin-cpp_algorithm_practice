@@ -10,7 +10,6 @@ fun main()= with(System.out.bufferedWriter()){
     repeat(m){
         val (from, to) = getIntList()
         edge[from][to] = true
-        edge[to][from]
     }
     for(k in 1 .. n){
         for(i in 1 .. n){
