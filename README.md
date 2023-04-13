@@ -50,6 +50,9 @@ foldRight, reduceRight: 오른쪽부터 시작
 
 ---
 
+
+✅ 우선순위 큐 시간 복잡도 : 삽입, 삭제 logN (힙 정렬 유지해야 함), 따라서 N개의 요소를 삽입하는 시간 복잡도는 NlogN
+
 <details markdown="1">
 <summary>✅ 코테 문제 핵심 유형</summary>
 <br>
